@@ -1,10 +1,4 @@
-import {
-  closeMainWindow,
-  environment,
-  getPreferenceValues,
-  showToast,
-  Toast,
-} from "@raycast/api";
+import { closeMainWindow, environment, getPreferenceValues, showToast, Toast } from "@raycast/api";
 import { execFile } from "node:child_process";
 import { join } from "node:path";
 import { promisify } from "node:util";
@@ -46,8 +40,5 @@ function normalizeDuration(value: string | undefined): number {
     return DEFAULT_DURATION_SECONDS;
   }
 
-  return Math.min(
-    Math.max(parsedValue, MIN_DURATION_SECONDS),
-    MAX_DURATION_SECONDS,
-  );
+  return Math.min(Math.max(parsedValue, MIN_DURATION_SECONDS), MAX_DURATION_SECONDS);
 }
