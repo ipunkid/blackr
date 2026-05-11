@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "build": "npm run build-native && ray build -e dist",
-    "build-native": "swiftc native/BlackrOverlay.swift -O -o assets/blackr-overlay && chmod 755 assets/blackr-overlay",
+    "build-native": "swiftc native/BlackrOverlay.swift -O -target arm64-apple-macos12 -o assets/blackr-overlay-arm64 && swiftc native/BlackrOverlay.swift -O -target x86_64-apple-macos12 -o assets/blackr-overlay-x64 && lipo -create assets/blackr-overlay-arm64 assets/blackr-overlay-x64 -output assets/blackr-overlay && rm assets/blackr-overlay-arm64 assets/blackr-overlay-x64 && chmod 755 assets/blackr-overlay",
     "dev": "npm run build-native && ray develop",
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",

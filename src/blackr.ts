@@ -15,10 +15,6 @@ const DEFAULT_DURATION_SECONDS = 60;
 const MIN_DURATION_SECONDS = 10;
 const MAX_DURATION_SECONDS = 600;
 
-type Preferences = {
-  durationSeconds?: string;
-};
-
 export default async function command() {
   const preferences = getPreferenceValues<Preferences>();
   const durationSeconds = normalizeDuration(preferences.durationSeconds);

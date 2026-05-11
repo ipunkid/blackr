@@ -1,6 +1,6 @@
 # Blackr Changelog
 
-## 1.0.0
+## [Initial Release] - {PR_MERGE_DATE}
 
 - Initial release.
 - Add the `Blackr` command for a temporary black cleaning screen.
