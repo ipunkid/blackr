@@ -25,6 +25,13 @@ Blackr accepts durations from `10` to `600` seconds. Empty or invalid values fal
 - Does not turn off the display or change brightness.
 - Does not collect data, access the network, or store user content.
 
+## Screencast
+
+<img width="720" height="450" alt="Launch Blackr from Raycast" src="https://github.com/user-attachments/assets/ef69434a-9d96-4bf3-89fb-61d84cfa654e" />
+
+
+<img width="720" height="450" alt="Black cleaning screen overlay" src="https://github.com/user-attachments/assets/a4f76dbd-4b7f-4a04-aafe-300a34eba610" />
+
 ## Platform Support
 
 - macOS uses a small native Swift overlay.
