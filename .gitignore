@@ -2,5 +2,6 @@ node_modules
 dist
 .raycast
 .DS_Store
+.codex
 assets/blackr-overlay-arm64
 assets/blackr-overlay-x64
