@@ -1,10 +1,4 @@
-import {
-  closeMainWindow,
-  environment,
-  getPreferenceValues,
-  showToast,
-  Toast,
-} from "@raycast/api";
+import { closeMainWindow, environment, getPreferenceValues, showToast, Toast } from "@raycast/api";
 import { execFile } from "node:child_process";
 import { join } from "node:path";
 import { promisify } from "node:util";
@@ -15,12 +9,8 @@ const DEFAULT_DURATION_SECONDS = 60;
 const MIN_DURATION_SECONDS = 10;
 const MAX_DURATION_SECONDS = 600;
 
-type Preferences = {
-  durationSeconds?: string;
-};
-
 export default async function command() {
-  const preferences = getPreferenceValues<Preferences>();
+  const preferences = getPreferenceValues<Preferences.Blackr>();
   const durationSeconds = normalizeDuration(preferences.durationSeconds);
   const overlayPath = join(environment.assetsPath, "blackr-overlay");
 
@@ -46,8 +36,5 @@ function normalizeDuration(value: string | undefined): number {
     return DEFAULT_DURATION_SECONDS;
   }
 
-  return Math.min(
-    Math.max(parsedValue, MIN_DURATION_SECONDS),
-    MAX_DURATION_SECONDS,
-  );
+  return Math.min(Math.max(parsedValue, MIN_DURATION_SECONDS), MAX_DURATION_SECONDS);
 }
