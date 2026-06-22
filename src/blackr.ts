@@ -14,7 +14,7 @@ interface Preferences {
 }
 
 export default async function command() {
-  const preferences = getPreferenceValues<Preferences>();
+  const preferences = getPreferenceValues<Preferences.Blackr>();
   const durationSeconds = normalizeDuration(preferences.durationSeconds);
   const overlayCommand = getOverlayCommand(durationSeconds);
 
