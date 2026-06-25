@@ -1,6 +1,10 @@
 # Blackr Changelog
 
-## [1.1.0] - {PR_MERGE_DATE}
+## [1.2.0] - 2026-06-25
+
+- Update the macOS overlay to use Swift.
+
+## [1.1.0] - 2026-06-22
 
 - Add support for Raycast on Windows.
 - Add platform-specific overlays for macOS and Windows.
